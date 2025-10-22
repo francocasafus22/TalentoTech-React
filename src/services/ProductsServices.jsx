@@ -20,3 +20,17 @@ export const getAllProductsByCategory = async (category, limit) => {
     }
 
 }
+
+export const getProductByID = async (id) => {
+    try {
+        const response= await fetch(`${apiURL}/${id}`);
+        if(!response.ok){
+            throw new Error("Hubo un error al obtener el producto.");
+        }
+        const data = await response.json()
+
+        return data
+    } catch (error) {
+        throw new Error(error.message)
+    }
+}
