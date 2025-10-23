@@ -3,11 +3,13 @@ import AppLayout from "./layouts/AppLayout";
 import HomePage from "./pages/HomePage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import CartPage from "./pages/CartPage";
+import CartProvider from "./contexts/CartContext/CartProvider";
 
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <CartProvider>
+        <BrowserRouter>
         <Routes>
             <Route element={<AppLayout/>}>
               <Route element={<HomePage/>} path="/"></Route>
@@ -16,6 +18,7 @@ function App() {
             </Route>
         </Routes>
       </BrowserRouter>
+      </CartProvider>
     </>
   );
 }

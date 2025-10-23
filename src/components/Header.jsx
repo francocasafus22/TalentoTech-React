@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Logo from './Logo'
 import { ShoppingCart, Menu, X } from 'lucide-react'
+import useCart from '../contexts/CartContext/useCart'
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false)
+    const {countItemsCart} = useCart()
+
+    const navigate = useNavigate()
 
     return (
         <header className='bg-transparent border-b border-zinc-700 text-blue-600'>
@@ -24,7 +28,12 @@ export default function Header() {
 
                 {/* Celular Toggle */}
                 <div className='flex items-center gap-5 md:hidden'>
-                    <ShoppingCart/>
+                     <Link className='relative cursor-pointer' to={"/cart"}>
+                        <ShoppingCart/>
+                        <span className='absolute -top-2 -right-2 bg-blue-600 text-amber-50 text-center text-xs  rounded-full w-5 h-5 flex items-center justify-center'>
+                            {countItemsCart()}
+                        </span>
+                    </Link>
                     <button 
                         onClick={() => setIsOpen(!isOpen)}
                         className='p-2 rounded-md hover:bg-zinc-200 transition'>
@@ -33,7 +42,13 @@ export default function Header() {
                 </div>
 
                 {/* Login */}
-                <div className='hidden md:flex'>
+                <div className='hidden md:flex md:items-center md:gap-5'>
+                    <Link className='relative cursor-pointer' to={"/cart"}>
+                        <ShoppingCart/>
+                        <span className='absolute -top-2 -right-2 bg-blue-600 text-amber-50 text-center text-xs  rounded-full w-5 h-5 flex items-center justify-center'>
+                            {countItemsCart()}
+                        </span>
+                    </Link>
                     <button className='hover:bg-amber-50 hover:text-blue-600 py-2 px-5 rounded-xl font-bold bg-blue-600 text-amber-50 transition-all duration-300 ease-in-out cursor-pointer'>Login</button>
                 </div>
             </div>
