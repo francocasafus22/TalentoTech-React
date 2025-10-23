@@ -1,16 +1,73 @@
-# React + Vite
+# 🛒 Pre-Entrega React - TalentoTech - E-Commerce - +TECH
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📚 Descripción del proyecto
+Este proyecto forma parte de la formación académica del programa **TalentoTech**, dentro del módulo de **Desarrollo Frontend con React**.  
+El objetivo de la pre-entrega es aplicar los conocimientos adquiridos sobre **componentización, manejo de estados, enrutamiento y Context API**, desarrollando una **Single Page Application (SPA)** con temática de e-commerce.
 
-Currently, two official plugins are available:
+El proyecto simula una tienda online de productos, donde se pueden visualizar artículos de forma dinámica, acceder al detalle de cada uno y gestionar un carrito de compras persistente.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🎯 Objetivos académicos cumplidos
+- Comprender la diferencia y la interacción entre **componentes presentacionales y contenedores**.  
+- Abordar un proyecto de **e-commerce estructurado en componentes reutilizables**.  
+- Renderizar **tarjetas de productos dinámicas** a partir de datos obtenidos mediante *fetch*.  
+- Desarrollar una **SPA** con componentes separados, incluyendo *Header*, *Footer* y secciones principales.  
+- Implementar **rutas estáticas** utilizando *React Router*.  
+- Emplear los hooks fundamentales: **useState, useEffect y useContext**.  
+- Implementar un **carrito de compras** con *Context API* para manejar su estado global.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+---
 
-## Expanding the ESLint configuration
+## ⚙️ Funcionalidades adicionales implementadas
+- **Persistencia del carrito** en *localStorage* para mantener el estado entre recargas.  
+- **Desacoplamiento de la lógica de datos** mediante un servicio independiente (`ProductService.js`).  
+- **Separación de responsabilidades**, organizando los componentes por rol (*presentacional*, *contenedor*, *contexto*, *servicio*, *layout*).  
+- Inclusión de un componente **ScrollToTop** para mejorar la experiencia de navegación.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧱 Arquitectura y tecnologías aplicadas
+- **React 18+ (Vite)** – Framework principal.  
+- **React Router DOM** – Gestión de rutas y navegación.  
+- **Context API + Custom Hooks** – Estado global del carrito.  
+- **Async/Await + Servicios desacoplados** – Manejo de datos externos.  
+- **LocalStorage API** – Persistencia de datos.  
+- **CSS modularizado** – Estilos independientes por componente.  
+
+La aplicación está estructurada bajo el patrón **container/presentational**, complementado con un sistema de **layouts** y **providers** que gestionan la composición raíz del proyecto.
+
+---
+
+## 📂 Estructura general del proyecto
+```
+src/
+ ├─ App.jsx
+ ├─ main.jsx
+ ├─ assets/
+ ├─ components/
+ ├─ containers/
+ ├─ contexts/
+ ├─ layouts/
+ ├─ pages/
+ ├─ providers/
+ └─ Services/
+```
+
+---
+
+## 🌐 Hosting
+El proyecto se encuentra desplegado en **Netlify**:  
+👉 **[Ir al proyecto](https://mastechshop.netlify.app/)**  
+
+---
+
+## 🧑‍💻 Autoría
+Proyecto académico desarrollado por **Franco Casafus**,  
+como parte del curso *TalentoTech - Desarrollo Frontend con React*.
+
+---
+
+## 🏫 Institución
+**TalentoTech**  
+Programa de formación tecnológica orientado al desarrollo de habilidades digitales y empleabilidad en tecnología.
