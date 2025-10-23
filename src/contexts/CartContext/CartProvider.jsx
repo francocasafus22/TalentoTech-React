@@ -87,6 +87,7 @@ export default function CartProvider({children}) {
         countItemsCart, 
         getTotalAmount,
         emptyCart,
+        getCartFromLocalStorage,
         itemQuantityDecreaseById,
         itemQuantityIncreaseById
     }

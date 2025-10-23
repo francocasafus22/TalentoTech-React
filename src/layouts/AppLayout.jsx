@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 
 export default function AppLayout() {
@@ -9,7 +10,7 @@ export default function AppLayout() {
             <main className="flex-1 container mx-auto p-4">
                 <Outlet></Outlet>
             </main>
-            <footer/>
+            <Footer/>
         </div>
     )
 }

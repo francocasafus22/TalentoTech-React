@@ -1,24 +1,10 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import AppLayout from "./layouts/AppLayout";
-import HomePage from "./pages/HomePage";
-import ProductDetailsPage from "./pages/ProductDetailsPage";
-import CartPage from "./pages/CartPage";
-import CartProvider from "./contexts/CartContext/CartProvider";
+
+import AppProvider from "./providers/AppProvider";
 
 function App() {
   return (
     <>
-      <CartProvider>
-        <BrowserRouter>
-        <Routes>
-            <Route element={<AppLayout/>}>
-              <Route element={<HomePage/>} path="/"></Route>
-              <Route element={<ProductDetailsPage/>} path="/products/:id"></Route>
-              <Route element={<CartPage/>} path="/cart"></Route>
-            </Route>
-        </Routes>
-      </BrowserRouter>
-      </CartProvider>
+      <AppProvider/>
     </>
   );
 }

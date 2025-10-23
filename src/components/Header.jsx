@@ -4,6 +4,7 @@ import Logo from './Logo'
 import { ShoppingCart, Menu, X } from 'lucide-react'
 import useCart from '../contexts/CartContext/useCart'
 
+
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false)
     const {countItemsCart} = useCart()
@@ -15,10 +16,10 @@ export default function Header() {
             <div className='flex justify-between px-5 md:px-10 py-5 items-center'>
                 
                 {/* Logo */}
-                <div>
+                <Link to={"/"}>
                     <Logo/>
-                </div>
-
+                </Link>
+            
                 {/* Escritorio */}
                 <nav className="hidden md:flex text-xl gap-3">
                     <Link to={"/"} className='py-2 px-5 hover:bg-amber-50 rounded-xl transition-all duration-300'>Home</Link>
