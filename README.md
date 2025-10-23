@@ -32,8 +32,8 @@ El proyecto simula una tienda online de productos, donde se pueden visualizar ar
 - **React Router DOM** – Gestión de rutas y navegación.  
 - **Context API + Custom Hooks** – Estado global del carrito.  
 - **Async/Await + Servicios desacoplados** – Manejo de datos externos.  
-- **LocalStorage API** – Persistencia de datos.  
-- **CSS modularizado** – Estilos independientes por componente.  
+- **LocalStorage API** – Persistencia de datos.
+- **TailwindCSS - Framework de CSS**
 
 La aplicación está estructurada bajo el patrón **container/presentational**, complementado con un sistema de **layouts** y **providers** que gestionan la composición raíz del proyecto.
 
